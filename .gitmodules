@@ -1,0 +1,3 @@
+[submodule "satori"]
+	path = deps/satori
+	url = git@github.com:sahithyandev/satori.git
