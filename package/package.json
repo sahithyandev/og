@@ -2,6 +2,11 @@
   "name": "node-og-images",
   "version": "0.0.1",
   "main": "src/index.js",
+  "author": {
+    "name": "Sahithyan Kandathasan",
+    "email": "sahithyan2701@gmail.com",
+    "url": "https://sahithyandev.github.io"
+  },
   "license": "MIT",
   "private": true,
   "dependencies": {
