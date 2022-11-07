@@ -5,6 +5,9 @@
   "author": "Sahithyan Kandathasan <sahithyan2701@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "concurrently pnpm:dev:test pnpm:serve:test",
+    "dev:test": "nodemon test/index.js",
+    "serve:test": "lr -p 3000",
     "build": "turbo run build",
     "test": "turbo run test"
   },
