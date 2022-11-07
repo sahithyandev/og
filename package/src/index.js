@@ -1,5 +1,6 @@
-const satori = require("satori").default;
 const fs = require("fs/promises");
+const satori = require("satori").default;
+const { Resvg } = require("@resvg/resvg-js");
 
 const defaultFonts = async () => {
 	const loadFont = (fontFileName) =>
@@ -35,5 +36,9 @@ exports.default = async function (a, options) {
 	}
 
 	const svgContent = await satori(a, _options);
-	return svgContent;
+	const resvg = new Resvg(svgContent);
+	const pngData = resvg.render();
+	const pngBuffer = pngData.asPng();
+
+	return pngBuffer;
 };

@@ -107,6 +107,6 @@ nodeOgImages(
 		width: 1200,
 		height: 630,
 	}
-).then((svgContent) => {
-	fs.writeFile("./test.svg", svgContent);
+).then((pngBuffer) => {
+	fs.writeFile("./test.png", pngBuffer);
 });
