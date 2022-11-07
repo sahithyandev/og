@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Sahithyan Kandathasan <sahithyan2701@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "turbo run build"
+  },
   "devDependencies": {
     "turbo": "^1.6.3"
   }
