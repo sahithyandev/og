@@ -53,7 +53,7 @@ nodeOgImages(
 							type: "h1",
 							props: {
 								style: {
-									maxWidth: 500,
+									maxWidth: 540,
 									fontSize: 64,
 									fontWeight: 600,
 								},
