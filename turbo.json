@@ -13,6 +13,14 @@
 			"dependsOn": [
 				"^build"
 			]
+		},
+		"my-test#test:dev": {
+			"outputs": [
+				"dist/**"
+			],
+			"dependsOn": [
+				"^build"
+			]
 		}
 	}
 }
