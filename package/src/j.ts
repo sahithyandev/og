@@ -1,10 +1,14 @@
 // TODO write a short jsdoc comment about it
-function j(tag, props, ...children) {
-	const output = {
+// TODO fix type issues
+
+type $FIX_ME = any;
+
+export default function j(tag: $FIX_ME, props: $FIX_ME, ...children: $FIX_ME[]) {
+	const output: $FIX_ME = {
 		type: tag,
 	};
 
-	let _props = {};
+	let _props = {} as $FIX_ME;
 
 	if (props != null && Object.keys(props).length != 0) {
 		_props = { ...props };
@@ -31,5 +35,3 @@ function j(tag, props, ...children) {
 
 	return output;
 }
-
-exports.default = j;
