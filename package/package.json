@@ -1,7 +1,7 @@
 {
   "name": "node-og-images",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "author": {
     "name": "Sahithyan Kandathasan",
     "email": "sahithyan2701@gmail.com",
