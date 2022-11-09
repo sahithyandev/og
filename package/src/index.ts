@@ -30,7 +30,7 @@ const defaultFonts = async () => {
 	];
 };
 
-export default async function nodeOgImages(a, options) {
+export default async function og(a, options) {
 	const _options = structuredClone(options);
 
 	if (_options.fonts == undefined || _options.fonts.length === 0) {

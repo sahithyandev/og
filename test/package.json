@@ -11,7 +11,7 @@
     "test:dev": "concurrently pnpm:dev:watch pnpm:dev:run pnpm:dev:serve"
   },
   "dependencies": {
-    "node-og-images": "workspace:*"
+    "@sahithyan/og": "workspace:*"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
