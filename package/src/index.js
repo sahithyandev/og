@@ -2,6 +2,8 @@ const fs = require("fs/promises");
 const satori = require("satori").default;
 const { Resvg } = require("@resvg/resvg-js");
 
+const j = require("./j").default;
+
 const defaultFonts = async () => {
 	const loadFont = (fontFileName) =>
 		fs.readFile(require.resolve(`./../assets/${fontFileName}.ttf`));
@@ -42,3 +44,4 @@ exports.default = async function (a, options) {
 
 	return pngBuffer;
 };
+exports.j = j;

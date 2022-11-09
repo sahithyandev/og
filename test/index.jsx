@@ -1,40 +1,7 @@
-const nodeOgImages = require("node-og-images").default;
+const { default: nodeOgImages, j } = require("node-og-images");
 const fs = require("fs/promises");
 
 /** @jsx j */
-
-function j(tag, _props, ...children) {
-	const output = {
-		type: tag,
-	};
-
-	let props = {};
-
-	if (_props != null && Object.keys(_props).length != 0) {
-		props = { ..._props };
-	}
-
-	if (children != undefined) {
-		if (typeof children === "string") {
-			props.children = children;
-		}
-		if (Array.isArray(children)) {
-			if (children.length === 1) {
-				props.children = children[0];
-			} else if (children.length != 0) {
-				props.children = children;
-			}
-		}
-	} else {
-		props.children = undefined;
-	}
-
-	if (Object.keys(props).length !== 0) {
-		output.props = structuredClone(props);
-	}
-
-	return output;
-}
 
 const x = (
 	<div
