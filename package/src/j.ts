@@ -1,14 +1,31 @@
 // TODO write a short jsdoc comment about it
-// TODO fix type issues
+export type JChildren = JElement | JElement[] | null | undefined;
 
-type $FIX_ME = any;
+export type JElementProps =
+	| {
+			children?: JChildren;
+	  }
+	| null
+	| undefined;
 
-export default function j(tag: $FIX_ME, props: $FIX_ME, ...children: $FIX_ME[]) {
-	const output: $FIX_ME = {
+export type JElement =
+	| string
+	| {
+			type: string;
+			props?: JElementProps;
+			children?: JChildren;
+	  };
+
+export default function j(
+	tag: string,
+	props: any,
+	...children: JElement[]
+): JElement {
+	const output: JElement = {
 		type: tag,
 	};
 
-	let _props = {} as $FIX_ME;
+	let _props = {} as JElementProps;
 
 	if (props != null && Object.keys(props).length != 0) {
 		_props = { ...props };
