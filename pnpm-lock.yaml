@@ -82,6 +82,9 @@ importers:
       '@babel/cli': ^7.19.3
       '@babel/core': ^7.20.2
       '@babel/plugin-transform-react-jsx': ^7.19.0
+      node-og-images: workspace:*
+    dependencies:
+      node-og-images: link:..
     devDependencies:
       '@babel/cli': 7.19.3_@babel+core@7.20.2
       '@babel/core': 7.20.2

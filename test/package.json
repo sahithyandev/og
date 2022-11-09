@@ -10,6 +10,9 @@
     "dev:serve": "lr -r 3000",
     "test:dev": "concurrently pnpm:dev:watch pnpm:dev:run pnpm:dev:serve"
   },
+  "dependencies": {
+    "node-og-images": "workspace:*"
+  },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.2",
