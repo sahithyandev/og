@@ -37,20 +37,59 @@ function j(tag, _props, ...children) {
 }
 
 const x = (
-	<div>
-		<div>
+	<div
+		style={{
+			display: "flex",
+			justifyContent: "center",
+			alignItems: "center",
+			fontFamily: "Inter",
+			fontSize: 22,
+			height: "100%",
+		}}
+	>
+		<div
+			style={{
+				backgroundColor: "#efefef",
+				width: "100%",
+				height: "100%",
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "center",
+				justifyContent: "center",
+			}}
+		>
 			<img
 				src="https://sahithyandev.github.io/apple-touch-icon.png"
 				width="180"
 				height="180"
 			/>
-			<h1>Hello JavaScript!</h1>
+			<h1
+				style={{
+					maxWidth: 540,
+					fontSize: 64,
+					fontWeight: 600,
+				}}
+			>
+				Hello JavaScript!
+			</h1>
 
-			<div>
-				<div> 27 February 2021 </div>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "space-around",
+					width: "100%",
+					fontWeight: 500,
+					fontSize: 24,
+				}}
+			>
+				<div>27 February 2021</div>
 
-				<div>
-					<div>javascript</div>
+				<div
+					style={{
+						display: "flex",
+					}}
+				>
+					<div style={{ marginRight: 8 }}>javascript</div>
 					<div>webdev</div>
 				</div>
 			</div>
