@@ -9,6 +9,9 @@
   },
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "tsup"
+  },
   "dependencies": {
     "@resvg/resvg-js": "^2.1.0",
     "satori": "workspace:0.0.43",
