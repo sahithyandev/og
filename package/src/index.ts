@@ -1,12 +1,12 @@
-const fs = require("fs/promises");
-const satori = require("satori").default;
-const { Resvg } = require("@resvg/resvg-js");
+import { readFile } from "fs/promises";
+import satori from "satori";
+import { Resvg } from "@resvg/resvg-js";
 
-const j = require("./j").default;
+export { default as j } from "./j";
 
 const defaultFonts = async () => {
 	const loadFont = (fontFileName) =>
-		fs.readFile(require.resolve(`./../assets/${fontFileName}.ttf`));
+		readFile(require.resolve(`./../assets/${fontFileName}.ttf`));
 
 	return [
 		{
@@ -30,7 +30,7 @@ const defaultFonts = async () => {
 	];
 };
 
-exports.default = async function (a, options) {
+export default async function nodeOgImages(a, options) {
 	const _options = structuredClone(options);
 
 	if (_options.fonts == undefined || _options.fonts.length === 0) {
@@ -43,5 +43,4 @@ exports.default = async function (a, options) {
 	const pngBuffer = pngData.asPng();
 
 	return pngBuffer;
-};
-exports.j = j;
+}
