@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel index.js -d dist",
+    "build": "babel index.jsx -d dist",
     "dev:watch": "pnpm run build -w",
     "dev:run": "nodemon dist/index.js",
     "dev:serve": "lr -r 3000",
