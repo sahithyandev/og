@@ -28,7 +28,28 @@ const defaultFonts = async (): Promise<FontOptions[]> => {
 	];
 };
 
-export default async function og(element: ReactNode, options: SatoriOptions) {
+/**
+ * SatoriOptions with a few changes.
+ * 
+ * Differences from SatoriOptions:
+ *  - `fonts` is not required 
+ */
+declare type CustomSatoriOptions = ({
+	width: number;
+	height: number;
+} | {
+	width: number;
+} | {
+	height: number;
+}) & {
+	fonts?: FontOptions[];
+	embedFont?: boolean;
+	debug?: boolean;
+	graphemeImages?: Record<string, string>;
+	loadAdditionalAsset?: (languageCode: string, segment: string) => Promise<FontOptions | string | undefined>;
+};
+
+export default async function og(element: ReactNode, options: CustomSatoriOptions) {
 	const _options: SatoriOptions = structuredClone(options);
 
 	if (_options.fonts == undefined || _options.fonts.length === 0) {
