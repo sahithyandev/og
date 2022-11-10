@@ -2,7 +2,7 @@
   "name": "@sahithyan/og",
   "description": "A small library for generating static social card images (also called Open Graph images) with Node.",
   "version": "0.0.1",
-  "main": "dist/index.js",
+  "type": "module",
   "author": {
     "name": "Sahithyan Kandathasan",
     "email": "sahithyan2701@gmail.com",
