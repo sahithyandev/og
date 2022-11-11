@@ -39,6 +39,8 @@ og(
 });
 ```
 
+NOTE: This library is using a **forked version of Satori** (which is located at https://github.com/sahithyandev/satori).
+
 ## Documentation
 
 ```javascript
