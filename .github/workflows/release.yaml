@@ -26,6 +26,6 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Publish @sahithyan/og to NPM
-        run: pnpm publish --filter @sahithyan/og
+        run: pnpm publish --filter @sahithyan/og --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
