@@ -9,7 +9,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --filter=@sahithyan/og",
+    "build:all": "turbo run build",
     "test": "turbo run test"
   },
   "devDependencies": {
