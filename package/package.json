@@ -21,6 +21,9 @@
     "email": "sahithyan2701@gmail.com",
     "url": "https://sahithyandev.github.io"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsup",
