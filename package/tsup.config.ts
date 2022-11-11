@@ -1,3 +1,4 @@
+import { copy } from "fs-extra";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -9,4 +10,14 @@ export default defineConfig({
 	clean: true,
 	dts: true,
 	noExternal: ["satori"],
+	esbuildPlugins: [
+		{
+			name: "copy-readme",
+			setup(build) {
+				build.onStart(() => {
+					return copy("../README.md", "./README.md", { overwrite: true });
+				});
+			},
+		},
+	],
 });
