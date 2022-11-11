@@ -21,7 +21,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm build
-      - run: cd ./package
-      - run: pnpm publish
+      - run: pnpm publish --filter @sahithyan/og
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
