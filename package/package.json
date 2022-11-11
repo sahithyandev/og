@@ -12,13 +12,16 @@
       "require": "./dist/index.cjs"
     }
   },
+  "files": [
+    "dist",
+    "assets"
+  ],
   "author": {
     "name": "Sahithyan Kandathasan",
     "email": "sahithyan2701@gmail.com",
     "url": "https://sahithyandev.github.io"
   },
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch"
