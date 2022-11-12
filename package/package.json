@@ -1,7 +1,7 @@
 {
   "name": "@sahithyan/og",
   "description": "A small library for generating static social card images (also called Open Graph images) with Node.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "module": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
