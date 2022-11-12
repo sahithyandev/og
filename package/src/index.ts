@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import satori, { SatoriOptions, FontOptions } from "satori";
+import satori, { SatoriOptions, FontOptions } from "@sahithyan/satori";
 import { Resvg } from "@resvg/resvg-js";
 import { ReactNode } from "react";
 
