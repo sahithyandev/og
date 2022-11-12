@@ -9,23 +9,16 @@ const defaultFonts = async (): Promise<FontOptions[]> => {
 	const loadFont = (fontFileName) =>
 		readFile(require.resolve(`./../assets/${fontFileName}.ttf`));
 
-	return [
-		{
-			name: "Inter",
-			weight: 400,
-			data: await loadFont("Inter-Regular"),
-		},
-		{
-			name: "Inter",
-			weight: 500,
-			data: await loadFont("Inter-Medium"),
-		},
-		{
-			name: "Inter",
-			weight: 600,
-			data: await loadFont("Inter-SemiBold"),
-		},
-	];
+	return Promise.all(
+		[300, 400, 500, 600, 700].map(
+			async (weight) =>
+				({
+					name: "Inter",
+					weight,
+					data: await loadFont(`Inter-${weight}`),
+				} as FontOptions)
+		)
+	);
 };
 
 /**
