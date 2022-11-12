@@ -1,4 +1,3 @@
-import { copy } from "fs-extra";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -7,7 +6,6 @@ export default defineConfig({
 	format: ["esm", "cjs"],
 	splitting: false,
 	sourcemap: false,
-	clean: false,
+	clean: true,
 	dts: true,
-	noExternal: ["satori"],
 });
