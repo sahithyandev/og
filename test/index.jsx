@@ -1,4 +1,4 @@
-const { default: nodeOgImages, j } = require("node-og-images");
+const { default: og, j } = require("@sahithyan/og");
 const fs = require("fs/promises");
 
 /** @jsx j */
@@ -64,7 +64,7 @@ const x = (
 	</div>
 );
 
-nodeOgImages(x, {
+og(x, {
 	width: 1200,
 	height: 630,
 }).then((pngBuffer) => {
