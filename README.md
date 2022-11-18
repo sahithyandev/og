@@ -41,6 +41,14 @@ og(
 
 NOTE: This library is using a **forked version of Satori** (which is located at https://github.com/sahithyandev/satori).
 
+## Getting Started
+
+You can install @sahithyan/og using the command below.
+
+```sh
+npm install @sahithyan/og
+```
+
 ## Documentation
 
 ```javascript
