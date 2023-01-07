@@ -1,11 +1,11 @@
 import { readFile } from "fs/promises";
-import { satori, SatoriOptions, FontOptions } from "@sahithyan/satori";
+import { satori, SatoriOptions, Font } from "@sahithyan/satori";
 import { Resvg } from "@resvg/resvg-js";
 import { ReactNode } from "react";
 
 export { default as j } from "./j";
 
-const defaultFonts = async (): Promise<FontOptions[]> => {
+const defaultFonts = async (): Promise<Font[]> => {
 	const loadFont = (fontFileName) =>
 		readFile(require.resolve(`./../assets/${fontFileName}.ttf`));
 
@@ -16,30 +16,37 @@ const defaultFonts = async (): Promise<FontOptions[]> => {
 					name: "Inter",
 					weight,
 					data: await loadFont(`Inter-${weight}`),
-				} as FontOptions)
+				} as Font)
 		)
 	);
 };
 
 /**
  * SatoriOptions with a few changes.
- * 
+ *
  * Differences from SatoriOptions:
- *  - `fonts` is not required 
+ *  - `fonts` is not required
  */
-declare type CustomSatoriOptions = ({
-	width: number;
-	height: number;
-} | {
-	width: number;
-} | {
-	height: number;
-}) & {
-	fonts?: FontOptions[];
+declare type CustomSatoriOptions = (
+	| {
+			width: number;
+			height: number;
+	  }
+	| {
+			width: number;
+	  }
+	| {
+			height: number;
+	  }
+) & {
+	fonts?: Font[];
 	embedFont?: boolean;
 	debug?: boolean;
 	graphemeImages?: Record<string, string>;
-	loadAdditionalAsset?: (languageCode: string, segment: string) => Promise<FontOptions | string | undefined>;
+	loadAdditionalAsset?: (
+		languageCode: string,
+		segment: string
+	) => Promise<Font | string | undefined>;
 };
 
 export default async function og(element: ReactNode, options: CustomSatoriOptions) {

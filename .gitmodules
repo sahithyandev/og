@@ -1,3 +1,4 @@
 [submodule "deps/satori"]
 	path = deps/satori
 	url = git@github.com:sahithyandev/satori.git
+	branch = refined
