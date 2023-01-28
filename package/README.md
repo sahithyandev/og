@@ -39,7 +39,7 @@ og(
 });
 ```
 
-NOTE: This library is using a **forked version of Satori** (which is located at https://github.com/sahithyandev/satori).
+NOTE: This library is using a **[forked version of Satori](https://github.com/sahithyandev/satori)**. And it is published under `@sahithyan/satori` on npm. Whenever a new version of Satori is released, the changes will be merged to the fork and `@sahithyan/satori` will be released (by me, manually). To make this easy to manage, I am using the exact version number of satori, for `@sahithyan/satori`.
 
 ## Documentation
 
@@ -47,7 +47,7 @@ NOTE: This library is using a **forked version of Satori** (which is located at 
 import og, { j } from "@sahithyan/og";
 ```
 
-These are the only exports: og (default export) and j.
+These are the only exports: `og` (default export) and `j`.
 
 ### og()
 
