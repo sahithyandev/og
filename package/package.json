@@ -44,7 +44,8 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.1.0",
     "@sahithyan/satori": "workspace:*",
-    "@types/react": "^17.0.38"
+    "@types/react": "^17.0.38",
+    "satori": "^0.10.13"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
