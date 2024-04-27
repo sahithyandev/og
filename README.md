@@ -97,7 +97,8 @@ if none of them are provided.
 
 ### j()
 
-The `j` function is a JSX Pragma function. I recommended using this pragma when transpiling JSX to be run with @sahithyan/og (or with Satori, in general).
+The `j` function is a JSX Pragma function. I recommended using this pragma when
+transpiling JSX to be run with @sahithyan/og (or with Satori, in general).
 
 To use as `j` as the pragma, add this line at the top of the file. You can
 declare it in your babel configuration as well, but this is recommended.
@@ -106,4 +107,5 @@ declare it in your babel configuration as well, but this is recommended.
 /** @jsx j */
 ```
 
-`j` is included as Satori didn't work with Preact's `h`  when I tried. If it does work for you, then it's totally fine to avoid using `j`.
+`j` is included as Satori didn't work with Preact's `h` when I tried. If it does
+work for you, then it's totally fine to avoid using `j`.
