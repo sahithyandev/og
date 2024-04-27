@@ -26,7 +26,7 @@ const x = (
 			}}
 		>
 			<img
-				src="https://sahithyandev.github.io/apple-touch-icon.png"
+				src="https://sahithyan.dev/apple-touch-icon.png"
 				width="180"
 				height="180"
 			/>
