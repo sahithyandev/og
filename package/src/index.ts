@@ -47,14 +47,32 @@ declare type CustomSatoriOptions = (
 	loadAdditionalAsset?: (
 		languageCode: string,
 		segment: string
-	) => Promise<Font | string | undefined>;
+	) => Promise<string | Array<Font>>;
+	tailwindConfig?: SatoriOptions["tailwindConfig"];
+	onNodeDetected?: (node: SatoriNode) => void;
 };
 
-export default async function og(element: ReactNode, options: CustomSatoriOptions) {
-	const _options: SatoriOptions = structuredClone(options);
+function isSatoriOptions(
+	options: CustomSatoriOptions
+): options is SatoriOptions {
+	if (!options.fonts || options.fonts.length === 0) {
+		console.error("@sahithyan/og: options.fonts is required");
+		return false;
+	}
+	return true;
+}
+
+export default async function og(
+	element: ReactNode,
+	options: CustomSatoriOptions
+) {
+	const _options = structuredClone(options);
 
 	if (_options.fonts == undefined || _options.fonts.length === 0) {
 		_options.fonts = await defaultFonts();
+	}
+	if (!isSatoriOptions(_options)) {
+		process.exit(1);
 	}
 
 	const svgContent = await satori(element, _options);
