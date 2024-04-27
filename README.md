@@ -39,7 +39,10 @@ og(
 });
 ```
 
-NOTE: This library is using a **[forked version of Satori](https://github.com/sahithyandev/satori)**. And it is published under `@sahithyan/satori` on npm. Whenever a new version of Satori is released, the changes will be merged to the fork and `@sahithyan/satori` will be released (by me, manually). To make this easy to manage, I am using the exact version number of satori, for `@sahithyan/satori`.
+Previously, @sahithyan/og was using a
+[forked version of Satori](https://github.com/sahithyandev/satori) (which fell
+behind updates). Now, it has been switched to using the upstream version of
+satori, as the required changes have been merged with satori.
 
 ## Documentation
 
