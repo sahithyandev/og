@@ -39,7 +39,10 @@ og(
 });
 ```
 
-NOTE: This library is using a **[forked version of Satori](https://github.com/sahithyandev/satori)**. And it is published under `@sahithyan/satori` on npm. Whenever a new version of Satori is released, the changes will be merged to the fork and `@sahithyan/satori` will be released (by me, manually). To make this easy to manage, I am using the exact version number of satori, for `@sahithyan/satori`.
+Previously, @sahithyan/og was using a
+[forked version of Satori](https://github.com/sahithyandev/satori) (which fell
+behind updates). Now, it has been switched to using the upstream version of
+satori, as the required changes have been merged with satori.
 
 ## Documentation
 
@@ -94,7 +97,8 @@ if none of them are provided.
 
 ### j()
 
-The `j` function is a JSX Pragma function. I recommended using this pragma when transpiling JSX to be run with @sahithyan/og (or with Satori, in general).
+The `j` function is a JSX Pragma function. I recommended using this pragma when
+transpiling JSX to be run with @sahithyan/og (or with Satori, in general).
 
 To use as `j` as the pragma, add this line at the top of the file. You can
 declare it in your babel configuration as well, but this is recommended.
@@ -103,4 +107,5 @@ declare it in your babel configuration as well, but this is recommended.
 /** @jsx j */
 ```
 
-`j` is included as Satori didn't work with Preact's `h`  when I tried. If it does work for you, then it's totally fine to avoid using `j`.
+`j` is included as Satori didn't work with Preact's `h` when I tried. If it does
+work for you, then it's totally fine to avoid using `j`.
